@@ -20,9 +20,17 @@ classes_router.register(r'teams', TeamsController, basename='class-teams')
 team_members = routers.NestedSimpleRouter(classes_router, r'teams', lookup='team')
 team_members.register(r'members', TeamMembersController, basename='team-members')
 
+teknoplat_router = routers.DefaultRouter(trailing_slash=False)
+teknoplat_router.register('meetings', MeetingsController, basename='meeting')
+teknoplat_router.register('pitches', PitchesController, basename='pitches')
+teknoplat_router.register('ratings', RatingsController, basename='ratings')
+teknoplat_router.register('remarks', RemarksController, basename='remarks')
+teknoplat_router.register('idea_validation', ChatbotsController, basename='idea_validation')
+
 urlpatterns = router.urls
 urlpatterns += classes_router.urls
 urlpatterns += team_members.urls
+urlpatterns += teknoplat_router.urls
 
 urlpatterns += [
     path('tokens/', include([

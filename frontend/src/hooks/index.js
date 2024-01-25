@@ -13,3 +13,10 @@ export { default as useTeam } from './useTeam';
 export { default as useNonLeaders } from './useNonLeaders';
 export { default as usePeerEvals } from './usePeerEvals';
 export { default as useAssignedPeerEval } from './useAssignedPeerEval';
+
+// Teknoplat
+export { default as useMeetings } from './useMeetings';
+export { default as useMeetingHistory } from './useMeetingHistory';
+export { default as useMeeting } from './useMeeting';
+export { default as usePitches } from './usePitches';
+export { default as useCriterias } from './useCriterias';
